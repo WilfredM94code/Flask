@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/add.css">
+    <title>New quote</title>
+</head>
+<body>
+    <h1>New quote</h1>
+    <div class="block">
+        <div class="content">
+            <form method="POST">
+                <div class = 'text_input'>
+                    <label for="quote"></label>
+                    <input id="quote" type="text" name="quote" required placeholder="Quote">
+                </div>
+                <div class = 'text_input'>
+                    <label for="author"></label>
+                    <input id="author" type="text" name="author" required placeholder="Author">
+                </div>
+                <input id="submit_button" type="submit" value="Create quote">
+            </form>
+                <div>
+                    <a class="link" href="{{ url_for('welcome') }}">No</a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

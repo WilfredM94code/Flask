@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/error.css">
+    <title>Error</title>
+</head>
+<body>
+    <div class="block">
+        <div class="header">
+            <h1>Yo boy, you messed up</h1>
+        </div>
+        <div class="paragraph">
+            <p>Try to go back and think on what you did</p>
+        </div>
+        <div class="link">
+            <a href="{{ url_for('welcome')}}">Home</a>
+            <a href="{{ url_for('new_quote')}}">Add quote</a>
+            <a href="/quotes/0">Quotes</a>
+            <a href="{{ url_for('random_quote') }}">Random quote</a>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/quote.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Quote</h1>
+    </div>
+    <div class="block">
+        <div class="content">
+            <p>Quote number: {{ index }}</p>
+            <p class="quote">{{ quote[0].text }}</p>
+            <p class="author">{{ quote[0].author }}</p>
+            <!-- 
+            <a href="{{url_for ('quotes_view',index = index + 1)}}">Next Quote Button using the 'url_for()' function</a>
+            -->
+            <div class="links">
+                {% if index > 0 %}
+                <a href="{{url_for ('quotes_view',index = index - 1)}}">Prev Quote</a>
+                {% endif %}
+                {% if index < max_index %}
+                <a href="{{url_for ('quotes_view',index = index + 1)}}">Next Quote</a>
+                {% else %}
+                <a href="{{url_for ('quotes_view',index = 0)}}">Go back to the fisrst quote</a>
+                {% endif %}
+                <a href="{{url_for ('welcome')}}">Home</a>
+                <a href="{{url_for ('remove_quote', index = index)}}">Remove quote</a>
+                <a href="{{ url_for('random_quote') }}">Random quote</a>
+            </div>
+        </div>
+    </div>
+    <!-- Next Quote Button -->
+</body>
+</html>

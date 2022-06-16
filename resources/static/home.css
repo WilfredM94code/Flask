@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    box-align: center;
+}
+
+body {
+    margin: 20px;
+    padding: 20px;
+    background-image: linear-gradient(to left, #1b7ea2, #189679);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.link {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.125s ease-in-out;
+}
+
+.un_list {
+    padding-inline-start: 0;
+}
+
+.block {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.125s ease-in-out;
+}
+
+/*
+.block:hover {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.009);
+}
+*/
+
+.quote {
+    box-align: center;
+    text-decoration: dashed;
+    list-style-type: none;
+    color:rgba(255, 255, 255, 0.25);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.250s ease-in-out;
+}
+
+.quote:visited {
+    text-decoration: dashed;
+    color:rgba(255, 255, 255, 0.75);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255,0);
+    transform: scale(1.02);
+}
+
+.quote:hover {
+    text-decoration: dashed;
+    color:rgba(255, 255, 255, 0.75);
+    margin: 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.475);
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration: dashed;
+    color:rgba(255, 255, 255, 0.75);
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.250s ease-in-out;
+}
+
+a:visited {
+    text-decoration: dashed;
+    color:rgba(255, 255, 255, 0.875);
+    margin: 10px;
+    padding: 10px;
+    transform: scale(1.02);
+}
+
+a:hover {
+    text-decoration: dashed;
+    color:rgba(255, 255, 255, 1);
+    margin: 10px;
+    padding: 10px;
+    transform: scale(1.02);
+}

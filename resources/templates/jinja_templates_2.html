@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>{{ web_title }}</title>
+</head>
+<body>
+    <h1 class = "title">{{ web_main_header }}</h1>
+    <p class = "text">{{ web_text }}</p>
+    <a class="link" href="{{ url_for('new_quote')}}">Add quote</a>
+    <a class="link" href="/quotes/0">Quotes</a>
+    <a class="link" href="{{ url_for('random_quote') }}">Random quote</a>
+    <div class="block">
+        <ul class = 'un_list'>
+            {% for quote in random_quotes %}
+            <li class = "quote">
+                <a href="{{ url_for('quotes_view', index = quote[1]) }}">{{ quote[1] }} - {{ quote[0].text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

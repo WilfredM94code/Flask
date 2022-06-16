@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="quote">
+            <p>Quote: {{ quote.text }}</p>
+        </div>
+        <div class="author">
+            <p>Author: {{ quote.author }}</p>
+        </div>
+    </div>
+    <!-- Home Button -->
+    <a href="/">Basic Home Button</a>
+    <a href="{{url_for ('welcome')}}">Home Button using the 'url_for()' function</a>
+    <!-- Next Quote Button -->
+    <a href="/quotes/{{index + 1}}">Basic Next Quote Button</a>
+    <a href="{{url_for ('quotes_view',index = index + 1)}}">Next Quote Button using the 'url_for()' function</a>
+</body>
+</html>
